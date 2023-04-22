@@ -1,5 +1,6 @@
 import './App.css';
 import {useState} from 'react';
+import { evaluate } from 'mathjs';
 
 function App (){
     const[result,setResult] = useState("");
@@ -12,8 +13,14 @@ function App (){
         setResult("");
     };
 
-    const calculate =()=>{
-        setResult(eval(result).toString());
+
+    const calculate = () => {
+      try {
+        const resultValue = evaluate(result);
+        setResult(resultValue.toString());
+      } catch (error) {
+        // handle error
+      }
     };
  return (
     <>
