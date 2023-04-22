@@ -27,3 +27,9 @@
 {
   width: 160px;
 }
+
+body {
+    background-image: url("https://images.pexels.com/photos/6985184/pexels-photo-6985184.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+    background-size: cover; /* optional */
+  }
+  
